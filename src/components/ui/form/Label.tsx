@@ -4,7 +4,8 @@ export const FormLabel= ({htmlFor="", className="", children}: Readonly<IFormLab
 
     return (
         <label htmlFor={htmlFor} className={`w-1/3 font-semibold ${className}`}>
-        {children}
+            User Name:{""}
+
             </label>
     );
 }  

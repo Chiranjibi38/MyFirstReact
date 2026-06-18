@@ -1,17 +1,19 @@
+import {FormLabel} from "../ui/form/Label";
+import{TextInput} from "../ui/form/Input";
 export default function LoginForm () {
 return (
     <form action="" className="flex flex-col gap-5">
                 <div className="flex w-full items-center">
-                    <label htmlFor="username" className="w-1/3 font-semibold text-white">User Name:{" "} </label>
-                    <div className="w-2/3 flex flex-col">
-                     <input type="email" className="border border-gray-300 w-full p-2 rounded-md shadow bg-white"/>
+                     <FormLabel htmlFor="username">User Name :</FormLabel>
+                     <div className="w-2/3 flex flex-col">
+                     <TextInput type="email" name="username" />
                      <span className="text-red-600 text-sm italic"></span>
                     </div>
                 </div>
                 <div className="flex w-full items-center">
-                    <label htmlFor="password" className="w-1/3 font-semibold text-white">Password:{" "} </label>
+                    <FormLabel htmlFor="password">Password :</FormLabel>
                     <div className="w-2/3 flex flex-col gap-1">
-                    <input type="password" className="border border-gray-300 w-full p-2 rounded-md shadow bg-white"/>
+                    <TextInput type="email" name="username"/>
                     <span className="text-red-800 text-sm italic"></span>
                     </div>
                     </div>
