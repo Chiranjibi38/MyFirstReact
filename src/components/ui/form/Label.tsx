@@ -1,3 +1,5 @@
+import type { IFormLabelProps } from "./Form.contract";
+
 export const FormLabel= ({htmlFor="", className="", children}: Readonly<IFormLabelProps>) => {
 
     return (
