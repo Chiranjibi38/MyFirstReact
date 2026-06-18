@@ -9,5 +9,6 @@ export interface IFormLabelProps{
     export interface ITextInputProps {
       type:HTMLInputTypeAttribute,
       name:string,
-      className?:string
+      className?:string,
+      errMsg?: string
     }

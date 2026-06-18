@@ -1,5 +1,5 @@
 import type {ITextInputProps} from "./Form.contract";
-export const TextInput=({type='text', name, className=''}:Readonly<ITextInputProps>) =>{
+export const TextInput=({type='text', name, className='',errMsg=""}:Readonly<ITextInputProps>) =>{
     return (
         <>
     <input 

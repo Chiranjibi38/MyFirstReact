@@ -1,5 +1,5 @@
-import {FormLabel} from "../ui/form/Label";
 import{TextInput} from "../ui/form/Input";
+import {FormLabel} from "../ui/form/Label";
 export default function LoginForm () {
 return (
     <form action="" className="flex flex-col gap-5">
