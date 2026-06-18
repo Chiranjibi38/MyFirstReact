@@ -6,9 +6,8 @@ export default function LeftSidePanel() {
         <Logo />
         <H1 className="text-green-100">
             Login Page
-        </H1>
-            <h1 className="text-6xl font-semibold text-green-100">Login Page</h1>
-            <p className="text-center p-5 text-pink-300" >
+        </H1>   
+             <p className="text-center p-5 text-pink-300" >
                Welcome!  please enter your username and password.
 
             </p>
