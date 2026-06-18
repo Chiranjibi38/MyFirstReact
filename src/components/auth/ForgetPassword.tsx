@@ -8,5 +8,7 @@ export default function ForgetPassword() {
 
 
         </section>
+        </>
+        
     );
 }
