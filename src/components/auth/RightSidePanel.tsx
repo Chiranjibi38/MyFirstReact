@@ -1,3 +1,4 @@
+import LoginForm from "../auth/LoginForm";
 import { H1 } from "../ui/typography/PageTitle";
 export default function RightSidePanel() {
     return (
