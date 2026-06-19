@@ -4,7 +4,7 @@ import RightSidePanel from "../../components/auth/RightSidePanel";
 
 export default function HomePage() {
     return (
-        <section className="bg-black flex h-screen gap-5  rounded-md">
+        <section className="flex h-screen gap-5 p-5  mb-0 rounded-md">
             <LeftSidePanel  />
           
             <RightSidePanel />
