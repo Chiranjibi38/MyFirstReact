@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import type { ICredentials } from "./Auth.contract";
 
 export default function LoginForm () {
-    const [credentials, setCredentials]= useState<ICredentials>({
+    const [credentials]= useState<ICredentials>({
         username:"",
         password:""
     })
