@@ -2,6 +2,7 @@ import{TextInput} from "../ui/form/Input";
 import {FormLabel} from "../ui/form/Label";
 import { useState, useEffect } from "react";
 import type { ICredentials } from "./Auth.contract";
+import { Link } from "react-router";
 
 export default function LoginForm () {
     const [credentials]= useState<ICredentials>({
@@ -40,9 +41,9 @@ export default function LoginForm () {
                     <TextInput type="email" name="username"/>
                     <span className="text-red-800 text-sm italic"></span>
                     </div>
-                    </div>
-                    <div className="flex w-full items-center justify-end">
-                    <a href="/forget-password" className="text-teal-500 hover:text-teal-600 hover:underline italic">Forgot password?</a>
+                </div>
+                <div className="flex w-full items-center justify-end">
+                    <Link to="/forget-password" className="text-teal-500 hover:text-teal-600 hover:underline italic">Forgot password?</Link>
 
                 </div>
                 <div className="flex w-full item-center gap-3">
