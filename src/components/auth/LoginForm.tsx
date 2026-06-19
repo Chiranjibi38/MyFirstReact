@@ -1,7 +1,31 @@
 import{TextInput} from "../ui/form/Input";
 import {FormLabel} from "../ui/form/Label";
+import { useState, useEffect } from "react";
+import type { ICredentials } from "./Auth.contract";
+
 export default function LoginForm () {
-return (
+    const [credentials, setCredentials]= useState<ICredentials>({
+        username:"",
+        password:""
+    })
+    const [loading, setLoading] = useState<boolean>(false)
+        
+    useEffect(() => {
+        console.log("I am always excuted")
+    })
+      useEffect(() => {
+        console.log("I am only called for the first time when component is mounted ")
+        return()=> {
+            setLoading(true);
+        }
+    }, [])
+
+     useEffect(() => {
+        console.log("I am only called  when credential state is manipulated ")
+    }, [credentials, loading])
+    
+
+    return (
     <form action="" className="flex flex-col gap-5">
                 <div className="flex w-full items-center">
                      <FormLabel htmlFor="username">User Name :</FormLabel>
@@ -12,7 +36,7 @@ return (
                 </div>
                 <div className="flex w-full items-center">
                     <FormLabel htmlFor="password">Password :</FormLabel>
-                    <div className="w-2/3 flex flex-col gap-1">
+                    <div className="w-2/3 flex flex-col gap-1">    
                     <TextInput type="email" name="username"/>
                     <span className="text-red-800 text-sm italic"></span>
                     </div>
