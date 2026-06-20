@@ -1,7 +1,6 @@
 import Logo from "../../components/logo/Logo";
 import { H1 } from "../ui/typography/PageTitle";
 import ForgetPasswordForm from "./ForgetPasswordForm";
-import RightSidePanel from "./RightSidePanel";
 export default function ForgetPassword() {
     return (
         <>

@@ -1,16 +1,7 @@
 import{TextInput} from "../ui/form/Input";
 import {FormLabel} from "../ui/form/Label";
-import { useState} from "react";
-import type {IUsername } from "./Auth.contract";
-import { Link } from "react-router";
 
 export default function ForgetPasswordForm () {
-    const [credentials, setCredentials]= useState<IUsername>({
-        username:"",
-    });
-
- 
-
     return (
     <form action="" className="flex flex-col gap-5 ">
                 <div className="flex w-full items-center">
