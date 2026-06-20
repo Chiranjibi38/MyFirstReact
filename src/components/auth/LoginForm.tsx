@@ -2,9 +2,10 @@ import{TextInput} from "../ui/form/Input";
 import {FormLabel} from "../ui/form/Label";
 import { useState, useEffect } from "react";
 import type { ICredentials } from "./Auth.contract";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function LoginForm () {
+    const navigate = useNavigate();
     const [credentials]= useState<ICredentials>({
         username:"",
         password:""
@@ -27,7 +28,14 @@ export default function LoginForm () {
     
 
     return (
-    <form action="" className="flex flex-col gap-5">
+    <form
+        action=""
+        className="flex flex-col gap-5"
+        onSubmit={(event) => {
+            event.preventDefault();
+            navigate("/", { state: { fromLogin: true } });
+        }}
+    >
                 <div className="flex w-full items-center">
                      <FormLabel htmlFor="username">User Name :</FormLabel>
                      <div className="w-2/3 flex flex-col">
@@ -47,8 +55,8 @@ export default function LoginForm () {
 
                 </div>
                 <div className="flex w-full item-center gap-3">
-                    <button className=" rounded-md cursor-pointer transition hover:scale-98 w-full bg-red-700 text-white flex items-center justify-center p-2">Reset</button>
-                    <button className=" rounded-md cursor-pointer transition hover:scale-98 w-full bg-teal-800 text-white flex items-center justify-center p-2">Submit</button>
+                    <button type="reset" className=" rounded-md cursor-pointer transition hover:scale-98 w-full bg-red-700 text-white flex items-center justify-center p-2">Reset</button>
+                    <button type="submit" className=" rounded-md cursor-pointer transition hover:scale-98 w-full bg-teal-800 text-white flex items-center justify-center p-2">Submit</button>
                 </div>
                
             </form>

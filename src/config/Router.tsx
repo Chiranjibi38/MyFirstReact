@@ -5,7 +5,8 @@ import NotFound from "../pages/error/NotFound";
 import AdminDashboard from "../pages/admin/Dashboard";
 
 const routerData = createBrowserRouter([
-    { path: "/", element: <HomePage /> },
+    { path: "/", Component: AdminDashboard },
+    { path: "/login", element: <HomePage /> },
     { path: "/forget-password", Component: ForgetPassword },
     {path: "/admin", Component:AdminDashboard },
     { path: "*", Component: NotFound },

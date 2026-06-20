@@ -1,7 +1,25 @@
 import { LuCircleUserRound } from "react-icons/lu";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router";
 import Logo from "../../components/logo/Logo";
 
 export default function AdminDashboard() {
+const navigate = useNavigate();
+const location = useLocation();
+const shouldOpenLogin = !(location.state as { fromLogin?: boolean } | null)?.fromLogin;
+
+useEffect(() => {
+    if (!shouldOpenLogin) {
+        return;
+    }
+
+    const loginTimer = window.setTimeout(() => {
+        navigate("/login");
+    }, 2500);
+
+    return () => window.clearTimeout(loginTimer);
+}, [navigate, shouldOpenLogin]);
+
 return (<>
 <section className="w-full bg-gray-100  h-screen">
     <header className=" bg-gray-100 py-2 px-5 w-full shadow flex justify-between dark:bg-gray-900">
