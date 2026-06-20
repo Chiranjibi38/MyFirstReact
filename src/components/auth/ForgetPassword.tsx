@@ -33,8 +33,8 @@ export default function ForgetPassword() {
         
                 <div className="flex w-full items-center  justify-center">
                     <a 
-                    href="/forget-password"
-                    className="text-teal-700 w-full shadow border-teal-800/40 rounded-full p-2 text-center border border-teal-800 text-sm hover:underline hover:text-teal-800/100 hover:bg-teal-800/50 transition hover:scale-96">
+                    href="/"
+                    className="text-teal-700 w-full shadow border-teal-800/40 rounded-full p-2 text-center border  text-sm hover:underline hover:text-teal-800 hover:bg-teal-800/50 transition hover:scale-96">
                            Login
                     </a>
 
