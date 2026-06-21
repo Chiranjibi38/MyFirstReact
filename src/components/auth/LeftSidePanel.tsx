@@ -8,7 +8,7 @@ export default function LeftSidePanel() {
             Login Page
         </H1>   
              <p className="text-center p-5 text-pink-300" >
-               Welcome!  please enter your username and password.
+               Welcome!  please login first.
 
             </p>
             

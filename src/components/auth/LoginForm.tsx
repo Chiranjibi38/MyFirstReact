@@ -46,7 +46,7 @@ export default function LoginForm () {
                 <div className="flex w-full items-center">
                     <FormLabel htmlFor="password">Password :</FormLabel>
                     <div className="w-2/3 flex flex-col gap-1">    
-                    <TextInput type="email" name="username"/>
+                    <TextInput type="password" name="password"/>
                     <span className="text-red-800 text-sm italic"></span>
                     </div>
                 </div>
